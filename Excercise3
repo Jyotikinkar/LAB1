@@ -1,0 +1,22 @@
+package mydemo2;
+import java.util.*;
+public class fibb {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int n,first=0,second=1,next;
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		
+		for(int i=1;i<=n;i++)
+		{
+			System.out.print(" " +first);
+			next=first+second;
+			first=second;
+			second=next;
+		}
+
+	}
+
+}
