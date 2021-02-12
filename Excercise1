@@ -1,0 +1,30 @@
+package Test;
+import java.util.*;
+
+public class CalDiff {
+	
+	static int calculateDifference(int n)
+	{
+		int sum=0,sum1=0;
+		for(int i=1;i<=n;i++)
+		{
+			sum+=Math.pow(i, 2);
+			sum1+=i;
+		}
+		return (int) (Math.pow(sum1, 2)-sum);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int n;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		n=sc.nextInt();
+		sc.close();
+		int z=calculateDifference(n);
+		System.out.println("Difference between the sum of the squares of the first n natural numbers and the square of their sum: ");
+		System.out.println(z);
+	}
+
+}
