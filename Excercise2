@@ -1,0 +1,35 @@
+package mydemo3;
+
+import java.util.Scanner;
+
+public class traflight {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Scanner sc = new Scanner(System.in);
+		String light=sc.nextLine();
+		sc.close();
+				
+		switch(light)
+		{
+		case "green":
+			System.out.println("GO!");
+			break;
+			
+		case "red":
+			System.out.println("STOP!");
+			break;
+			
+		case "yellow":
+			System.out.println("READY!");
+			break;	
+			
+		default:
+			System.out.println("Try again!!!");
+		}
+
+	}
+
+}
