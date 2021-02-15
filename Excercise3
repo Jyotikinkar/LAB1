@@ -1,3 +1,4 @@
+//Non-Recursive
 package mydemo2;
 import java.util.*;
 public class fibb {
@@ -5,17 +6,45 @@ public class fibb {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int n,first=0,second=1,next;
+		int n,first=1,second=1,next;
 		Scanner sc=new Scanner(System.in);
 		n=sc.nextInt();
 		
-		for(int i=1;i<=n;i++)
+		for(int i=3;i<=n;i++)
 		{
-			System.out.print(" " +first);
 			next=first+second;
 			first=second;
 			second=next;
 		}
+		System.out.println(""+second);
+
+	}
+
+}
+
+//Recursive
+package mydemo2;
+
+import java.util.Scanner;
+
+public class fibbrecur {
+	
+	public static int fibrecursive(int n)
+	{
+		if(n<=1)
+			return n;
+		else
+			return fibrecursive(n-1)+fibrecursive(n-2);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int n;
+		Scanner sc=new Scanner(System.in);
+		n=sc.nextInt();
+		sc.close();
+		System.out.println(fibrecursive(n));
 
 	}
 
